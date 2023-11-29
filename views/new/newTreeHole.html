@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>树洞</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <!-- 新 Bootstrap5 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+    <!--  popper.min.js 用于弹窗、提示、下拉菜单 -->
+    <script src="https://cdn.staticfile.org/popper.js/2.9.3/umd/popper.min.js"></script>
+    <!-- 最新的 Bootstrap5 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+</head>
+<body>
+    <header class="c-new-header">
+        <ul class="nav nav-pills nav-justified">
+            <li class="nav-item">
+              <a class="nav-link c-new-header-left-nav" href="/index"> <i class="fa fa-angle-left"></i> </a>
+            </li>
+            <span class="navbar-text c-new-header-text">
+                树 洞
+            </span>
+            <li class="nav-item">
+              <a class="nav-link c-new-header-right-action" href="#"><i class="fa fa-camera-retro"></i> </a>
+            </li>
+          </ul>
+    </header>
+    <div class="container mt-3">
+        <form action="">
+            <div class="mb-3 mt-3">
+                <label for="Date" class="form-label">日期：</label>
+                <input type="Date" class="form-control" id="Date" placeholder="Enter Date" name="Date">
+            </div>
+            <div class="mb-3">
+                <label for="floatingTextarea">事情: </label>
+                <textarea class="form-control" placeholder="今天的心情如何" id="floatingTextarea"></textarea>
+            </div>
+            <div class="mb-3">
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-block">保存</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
