@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node ./bin/www" ,
     "schedule": "node ./util/schedule",
-    "dev": "npm-run-all -p start schedule" //需要全局安装 npm-run-all
+    "dev": "npm-run-all -p start schedule"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
