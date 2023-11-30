@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head ng-app="myTreeApp">
 	<meta charset="utf-8">
-	<title>Bootstrap 实例 - 图像</title>
+	<title>欢 迎</title>
 	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 	<!-- 新 Bootstrap5 核心 CSS 文件 -->
 	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
@@ -10,11 +10,27 @@
 	<script src="https://cdn.staticfile.org/popper.js/2.9.3/umd/popper.min.js"></script>
 	<!-- 最新的 Bootstrap5 核心 JavaScript 文件 -->
 	<script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+	<!-- 引入Angular JS -->
+	<script src="https://cdn.staticfile.org/angular.js/1.4.6/angular.min.js"></script>
+
+	<!-- 自定义基础样式调整 -->
     <link rel="stylesheet" href="/stylesheets/base.css" >
 </head>
 <body class="c-welcome-bg-img">
-    <div class="container">
-        <a href="/login"> <span class="badge pull-right c-welcome-badge"> 跳 过 </span> </a>
+    <div class="container" ng-controller="badgeCtrl">
+        <a ng-click="go()" ng-href="{{linkUrl}}"> <span class="badge pull-right c-welcome-badge"> 跳 过 </span> </a>
     </div>
 </body>
+
+<script>
+	var app = angular.module('myTreeApp',[]);
+	app.controller("badgeCtrl",function($scope){
+		$scope.linkUrl = '/index';
+		$scope.go = function(){
+			console.log('go function run');
+			window.location.href = '/index';
+		};
+	});
+</script>
+
 </html>
