@@ -41,13 +41,13 @@ module.exports = {
         }); 
     },
 
-    delete(sobjectId){
+    delete(sobject){
         return new Promise((resolve,reject) =>{
             org.authenticate({ username: SFInfo.username, password: SFInfo.password}, function(err, oauth) {
                 if(err){
                     reject(err);
                 } else {
-                    org.delete({ id: sobjectId, oauth: oauth }, function(err, resp) {
+                    org.delete({ sobject: sobject, oauth: oauth }, function(err, resp) {
                         if(err){
                             reject(err);
                         } else {
