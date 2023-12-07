@@ -23,16 +23,58 @@ module.exports = {
         });
     },
 
-    insert(){
-
+    insert(sobject){
+        return new Promise((resolve,reject) => {
+            org.authenticate({ username: SFInfo.username, password: SFInfo.password}, function(err, oauth) {
+                if(err) {
+                    reject(err);
+                } else {
+                    org.insert({ sobject: sobject, oauth: oauth }, function(err, resp) {
+                        if(err) {
+                            reject(err);
+                        } else {
+                            resolve(resp);
+                        }
+                    });
+                }
+            });
+        }); 
     },
 
-    delete(){
-
+    delete(sobjectId){
+        return new Promise((resolve,reject) =>{
+            org.authenticate({ username: SFInfo.username, password: SFInfo.password}, function(err, oauth) {
+                if(err){
+                    reject(err);
+                } else {
+                    org.delete({ id: sobjectId, oauth: oauth }, function(err, resp) {
+                        if(err){
+                            reject(err);
+                        } else {
+                            resolve(resp);
+                        }
+                    });
+                }
+            });
+        });
     },
 
-    upsert(){
-
+    update(sobject){
+        return new Promise((resolve,reject) =>{
+            org.authenticate({ username: SFInfo.username, password: SFInfo.password }, function(err, oauth){
+                if(err){
+                    reject(err);
+                } else {
+                    org.update({ sobject: sobject, oauth: oauth}, function(err,resp){
+                        if(err){
+                            reject(err);
+                        } else {
+                            resolve(resp);
+                        }
+                    });
+                }
+            });
+        });
     }
 }
 
