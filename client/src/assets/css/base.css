@@ -86,7 +86,7 @@ body {
 }
 /* welcome style */
 .c-welcome-bg-img{
-  background-image: url('./images/welcome.png');
+  background-image: url('../images/welcome.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -97,7 +97,7 @@ body {
 
 /* login style */
 .c-login-bg-img{
-  background-image: url('./images/welcome.png');
+  background-image: url('../images/welcome.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
