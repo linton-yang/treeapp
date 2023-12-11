@@ -1,5 +1,5 @@
 var nforce = require('nforce');
-var SFInfo = require('../../config/SFConfig');
+var SFInfo = require('../../config/systemConfig');
 
 var org = nforce.createConnection({
   clientId: SFInfo.clientId,
@@ -51,7 +51,7 @@ module.exports = {
                         if(err){
                             reject(err);
                         } else {
-                            resolve(resp);
+                            resolve('success');
                         }
                     });
                 }
@@ -69,7 +69,7 @@ module.exports = {
                         if(err){
                             reject(err);
                         } else {
-                            resolve(resp);
+                            resolve('success');
                         }
                     });
                 }

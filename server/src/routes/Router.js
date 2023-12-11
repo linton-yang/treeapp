@@ -1,10 +1,17 @@
 var express = require('express');
 var router = express.Router();
-var queryContrller = require('../controller/QueryController');
+var queryContrller = require('../controller/actionController');
 
-router.get('/', queryContrller.query);
-router.get('/new/lead', queryContrller.insertLead)
-router.get('/delete/lead', queryContrller.deleteLead);
-router.get('/update/lead', queryContrller.updateLead);
+router.post('/query', 
+    queryContrller.query);
+
+router.post('/new/:sobject', 
+    queryContrller.insert);
+
+router.get('/delete/:sobject/:id', 
+    queryContrller.delete);
+
+router.post('/update/:sobject', 
+    queryContrller.update);
 
 module.exports = router;
