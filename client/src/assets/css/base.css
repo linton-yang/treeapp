@@ -84,16 +84,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* welcome style */
-.c-welcome-bg-img{
-  background-image: url('../images/welcome.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.c-welcome-badge{
-  font-size: -webkit-xxx-large ;
-  margin-top: 120px;
-}
 
 /* login style */
 .c-login-bg-img{
