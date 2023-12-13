@@ -79,7 +79,7 @@
         </div>
     </template>
     <myComp v-if="showMy"></myComp>
-    <footComp></footComp>
+    <footComp @child-tabOn="tabOn"></footComp>
 </template>
 
 
@@ -99,9 +99,16 @@
             }
         },
         methods:{
-            tabOn(){
-                this.home = !this.home;
-                this.showMy = !this.showMy;
+            tabOn(tabName){
+                console.log(tabName);
+                if(tabName == 'home') {
+                    this.home = true;
+                    this.showMy = false;
+                }
+                if(tabName == 'my') {
+                    this.showMy = true;
+                    this.home = false;
+                }
             }
         }
     }

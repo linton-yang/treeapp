@@ -2,7 +2,7 @@
      <header class="c-new-header">
         <ul class="nav nav-pills nav-justified">
             <li class="nav-item">
-                <a class="nav-link c-my-header-left-nav" onclick="javascript:navBack();"> <i class="fa fa-angle-left"></i> </a>
+                <a class="nav-link c-my-header-left-nav" @click="navBack"> <i class="fa fa-angle-left"></i> </a>
             </li>
             <span class="navbar-text c-my-header-text">
                 我 的 信 息
@@ -40,6 +40,16 @@
         </div>
     </div>
 </template>
+
+<script>
+    export default{
+        methods: {
+            navBack(){
+                window.history.back();
+            }
+        }
+    }
+</script>
 
 <style>
 .c-new-header{

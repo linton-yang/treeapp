@@ -2,9 +2,9 @@
     <!-- bottom menu list -->
     <div>
         <ul class="nav fixed-bottom c-index-ui-content c-index-nav-bottom-bg">
-            <li><a href="/home"><i class="fa fa-home"></i> 首 页 </a></li>
-            <li><a href="#" data-bs-toggle="modal" data-bs-target="#myModal"><i class="fa fa-plus-square"></i></a></li>
-            <li @click="tabOn()"><a><i class="fa fa-user"></i> 我 的 </a></li>
+            <li><a @click="tabOn('home')"><i class="fa fa-home"></i> 首 页 </a></li>
+            <li><a data-bs-toggle="modal" data-bs-target="#myModal"><i class="fa fa-plus-square"></i></a></li>
+            <li><a @click="tabOn('my')"><i class="fa fa-user"></i> 我 的 </a></li>
         </ul>
     </div>
 
@@ -52,6 +52,11 @@
 
             }
         },
+        methods: {
+            tabOn(tabName){
+                this.$emit('child-tabOn',tabName);
+            },
+        }
     }
 </script>
 

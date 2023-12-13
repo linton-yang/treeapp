@@ -1,7 +1,7 @@
 <template>
     <body class="c-welcome-bg-img">
     <div class="container">
-        <span class="badge pull-right c-welcome-badge"> 跳 过 {{initTime}}</span>
+        <span class="badge pull-right c-welcome-badge" @click="badgeOn"> 跳 过 {{initTime}}</span>
     </div>
 </body>
 </template>
@@ -16,6 +16,9 @@ export default{
     methods:{
         leftTime(){
            if(this.initTime >0 ) this.initTime--;
+        },
+        badgeOn(){
+            this.$emit('welcome-badge');
         }
     },
     created (){
