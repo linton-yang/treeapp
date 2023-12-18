@@ -18,8 +18,8 @@ export default{
     },
     methods: {
         leftTime() {
-            if (this.initTime > 0)
-                this.initTime--;
+            if (this.initTime > 0) this.initTime--;
+            if (this.initTime <= 0 ) this.$router.push({path:'/home'});
         }
     },
     created() {

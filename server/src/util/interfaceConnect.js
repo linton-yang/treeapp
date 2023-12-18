@@ -10,16 +10,21 @@ var org = nforce.createConnection({
 module.exports = {
     query(sql){
         return new Promise((resolve,reject) =>{
-            org.authenticate({ username: SFInfo.username, password: SFInfo.password}, function(err, oauth) {
-                if(err) {
-                    reject(err);
-                } else {
-                    org.query({ query: sql, oauth: oauth },function(err, resp) {
-                        if(err) reject(err);
-                        if(resp.records && resp.records.length) resolve(resp.records);
-                    })
-                }
-            });
+            try{
+                org.authenticate({ username: SFInfo.username, password: SFInfo.password}, function(err, oauth) {
+                    if(err) {
+                        reject(err);
+                    } else {
+                        org.query({ query: sql, oauth: oauth },function(err, resp) {
+                            console.log('result',err,resp);
+                            if(err) reject(err);
+                            if(resp.records && resp.records.length) resolve(resp.records);
+                        })
+                    }
+                });
+            }catch(error){
+                reject(error);
+            }
         });
     },
 

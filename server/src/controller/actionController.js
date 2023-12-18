@@ -3,10 +3,14 @@ var SFConnect = require('../util/interfaceConnect');
 
 module.exports = {
     query( req, res ){
-        SFConnect.query(req.body)
-        .then( result => {
-            res.send(result);
-        })
+        try{
+            SFConnect.query(req.body)
+            .then( result => {
+                res.send(result);
+            })
+        }catch(error){
+            res.send(error);
+        }
     },
 
     insert( req, res ){

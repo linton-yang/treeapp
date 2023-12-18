@@ -2,14 +2,14 @@
         <header class="c-list-header">
         <ul class="nav nav-pills nav-justified">
             <li class="nav-item">
-                <a class="nav-link c-list-header-left-nav" onclick="javascript:navBack();"> <i
+                <a class="nav-link c-list-header-left-nav" herf="/home"> <i
                         class="fa fa-angle-left"></i> </a>
             </li>
             <span class="navbar-text c-list-header-text">
                 我 的 设 置
             </span>
             <li class="nav-item">
-                <a class="nav-link c-list-header-right-action" href="/index"><i class="fa fa-question-circle-o"></i> </a>
+                <a class="nav-link c-list-header-right-action" href="/my"><i class="fa fa-question-circle-o"></i> </a>
             </li>
         </ul>
     </header>

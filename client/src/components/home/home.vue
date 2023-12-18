@@ -81,7 +81,7 @@
     <!-- bottom menu list -->
     <div>
         <ul class="nav fixed-bottom c-index-ui-content c-index-nav-bottom-bg">
-            <li><a href="/index"><i class="fa fa-home"></i> 首 页 </a></li>
+            <li><a href="/home"><i class="fa fa-home"></i> 首 页 </a></li>
             <li><a href="#" data-bs-toggle="modal" data-bs-target="#myModal" ><i class="fa fa-plus-square"></i></a></li>
             <li><a href="/my"><i class="fa fa-user"></i> 我 的 </a></li>
         </ul>
@@ -122,6 +122,33 @@
         </div>
     </div>
 </template>
+
+<script>
+    import axios from 'axios';
+
+    export default{
+
+        data(){
+            return {
+                diarys:[],
+            }
+        },
+        methods:{
+            async listDiary(){
+                let sql = 'Select Id,LastName,FirstName From Lead Limit 10';
+                await axios.post('http://localhost:4040/query', { sql })
+                .then(response =>{
+                    console.log(response);
+                }).then(error => {
+                    console.log(error);
+                });
+            },
+        },
+        created() {
+            this.listDiary();
+        }
+    }
+</script>
 
 <style scoped> 
 /* index style */

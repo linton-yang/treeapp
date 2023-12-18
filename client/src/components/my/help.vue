@@ -2,13 +2,13 @@
     <header class="c-list-header">
         <ul class="nav nav-pills nav-justified">
             <li class="nav-item">
-                <a class="nav-link c-list-header-left-nav" onclick="javascript:navBack();"> <i class="fa fa-angle-left"></i> </a>
+                <a class="nav-link c-list-header-left-nav" href="/my"> <i class="fa fa-angle-left"></i> </a>
             </li>
             <span class="navbar-text c-list-header-text">
                 使用帮助
             </span>
             <li class="nav-item">
-                <a class="nav-link c-list-header-right-action" href="/index"><i class="fa fa-question-circle-o"></i> </a>
+                <a class="nav-link c-list-header-right-action" href="/home"><i class="fa fa-question-circle-o"></i> </a>
             </li>
         </ul>
         <div class="form-group">
